@@ -1,6 +1,0 @@
-Django==4.1.7
-asgiref
-pytz==2022.7.1
-sqlparse
-gunicorn
-pysqlite3-binary
