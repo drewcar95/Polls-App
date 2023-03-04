@@ -1,19 +1,10 @@
-language: python
-
-python:
-  - 3.7
-
-install:
-  - pip install -r requirements.txt
-
-before_script:
-  - python manage.py migrate
-  - python manage.py collectstatic --noinput
-
-script:
-  - black --check .
-  - flake8 .
-  - coverage run --source=mysite_swe1_app,polls manage.py test
-
-after_script:
-  - coveralls
+deploy:
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: "Encrypted <access-key-id>="
+  secret_access_key:
+    secure: "Encypted <secret-access-key>="
+  region: "us-east-1"
+  app: "example-app-name"
+  env: "example-app-environment"
+  bucket_name: "the-target-S3-bucket"
