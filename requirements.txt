@@ -3,3 +3,7 @@ asgiref
 pytz==2022.7.1
 sqlparse
 gunicorn
+black==22.6.0
+flake8==4.0.1
+coverage==6.5.0
+coveralls==3.3.1
